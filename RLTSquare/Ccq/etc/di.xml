@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="RLTSquare\Ccq\Api\MessageInterface" type="RLTSquare\Ccq\Model\Message"/>
+    <preference for="RLTSquare\Ccq\Api\SubscriberInterface" type="RLTSquare\Ccq\Model\Subscriber"/>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="publish-message" xsi:type="object">RLTSquare\Ccq\Console\MessagePublishCommand</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
