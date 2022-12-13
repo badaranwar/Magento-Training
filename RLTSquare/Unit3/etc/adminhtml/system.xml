@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="rltsquare" sortOrder="1">
+            <label>RLTSquare</label>
+        </tab>
+        <section id="unit3" sortOrder="10" showInDefault="1" showInStore="1" showInWebsite="1" type="text">
+            <tab>rltsquare</tab>
+            <label>Unit 3</label>
+            <resource>RLTSquare_Unit3::config</resource>
+            <group id="settings" type="text" showInWebsite="1" showInStore="1" showInDefault="1" sortOrder="20">
+                <label>Settings</label>
+                <field id="username" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Username</label>
+                    <validate>required-entry validate-data no-whitespace</validate>
+                    <comment>Enter a username.</comment>
+                </field>
+                <field id="password" translate="label" type="obscure" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Password</label>
+                    <comment>Enter a password.</comment>
+                    <validate>required-entry validate-password no-whitespace</validate>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="environment_type" translate="label" type="select" sortOrder="30" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Environment Type</label>
+                    <source_model>RLTSquare\Unit3\Model\Config\Source\EnvironmentType</source_model>
+                    <comment>Please select an environment type</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
