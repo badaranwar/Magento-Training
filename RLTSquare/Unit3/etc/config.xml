@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+        <default>
+            <unit3>
+                <settings>
+                    <username>badaranwar</username>
+                    <password>Badar123</password>
+                    <environment_type>staging</environment_type>
+                </settings>
+            </unit3>
+        </default>
+</config>

@@ -1,0 +1,41 @@
+<?php
+/**
+ * @var Unit3 $block
+ */
+
+use RLTSquare\Unit3\Block\Unit3;
+
+if ($block->getEnvironmentType() == 'staging' || $block->getEnvironmentType() == 'development') {
+    $password = substr($block->getUserPassword(), 0, 3);
+} else {
+    $password = '';
+}
+?>
+<div class="block block-dashboard-info">
+    <div class="block-title"><strong><?= $block->escapeHtml(__('User Application Mode Information')) ?></strong></div>
+    <div class="block-content">
+        <div class="box box-information">
+            <strong class="box-title">
+                <span><?= $block->escapeHtml(__('Details:')) ?></span>
+            </strong>
+            <div class="box-content">
+                <table class="data table" id="unit3-data-table">
+                    <tbody>
+                    <tr>
+                        <th scope="col">Username</th>
+                        <td data-th="username"><?= $block->getUserName() ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Password</th>
+                        <td data-th="password"><?= $password ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Environment Type</th>
+                        <td data-th="environment-type"><?= $block->getEnvironmentType() ?></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <referenceContainer name="content">
+        <block class="RLTSquare\Unit3\Block\Unit3" name="user_mode_information" template="RLTSquare_Unit3::info.phtml"/>
+    </referenceContainer>
+</page>
